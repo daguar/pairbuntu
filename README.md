@@ -20,14 +20,10 @@ Setup:
    (Note: remember to edit this command to reflect your AWS key file and the address of your Amazon EC2 instance.)
 
 3. Once logged in, run this command, and when prompted for a password, type 'ubuntu' (without quotes):
+
         wget https://raw.github.com/daguar/pairbuntu/master/pairbuntu.sh && sudo bash pairbuntu.sh
 
-4. run the script with sudo to configure the server (the password is 'ubuntu' without quotes):
-
-        sudo bash pairbuntu.sh
-
-
-5. Follow the instructions, and start showing off some code in your brand spanking new shared terminal!
+4. Follow the instructions, and start showing off some code in your brand spanking new shared terminal!
 
 
 
