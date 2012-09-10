@@ -7,10 +7,7 @@ Simple script to configure an Amazon EC2 Ubuntu instance for quick pair programm
 
 to get a quick shared session up and running.
 
-The script helps you interactively set up two users (coder1 and coder2), configures screen for sharing, and then gives you the commands to execute.
-
-Inspiration/lots of the commands are taken from this tutorial: http://blog.siyelo.com/remote-pair-programming-with-screen
-So kudos and thanks to Siyelo! Any errors/vulnerabilities here are my own, and no fault of theirs.
+The script sets up two user accounts for you (coder1 and coder2), configures screen for sharing, and then gives you the commands to execute to get started with the shared terminal.
 
 
 Setup:
@@ -33,6 +30,9 @@ Setup:
 
 Etc:
 ----
+
+Inspiration/most of base script is taken from this tutorial: http://blog.siyelo.com/remote-pair-programming-with-screen
+So kudos and thanks to Siyelo! Any errors/vulnerabilities here are my own, and no fault of theirs.
 
 WARNING 1:
 This setup is not particularly secure: it uses password authentication for ssh, 
