@@ -35,5 +35,6 @@ service ssh restart
 echo -e "multiuser on\nacladd coder2" > /home/coder1/.screenrc
 chown coder1 /home/coder1/.screenrc
 
-echo -e "\nw00t. Setup is complete.\n\nNext, have your buddy log in via ssh as coder2, using the password you set up for that account.\n\n  ssh coder2@ec2-9999-9999-9999-9999.compute-1.amazon.com\n\n  (Remember to replace the ec2-999... above with your own instance's address.)\n\Then, you as coder1 type:\n\n  screen -S pairprog\n\nto start your pairing session, and have your buddy run\n\n  screen -x coder1/pairprog\n\nafter logging in to enter your shared screen.\n\nFor more help, use 'man screen' to learn more about how screen works."
+echo -e "\n\n\n============= w00t =============\n\n"
+echo -e "Setup is complete.\n\nNext, have your buddy log in via ssh as coder2, using the password you set up for that account.\n\n  ssh coder2@ec2-9999-9999-9999-9999.compute-1.amazon.com\n  (Remember to replace the ec2-999... above with your own instance's address.)\n\n\nThen, you as coder1 type:\n\n  screen -S pairprog\n\nto start your pairing session, and have your buddy run\n\n  screen -x coder1/pairprog\n\nafter logging in to enter your shared screen.\n\n\nFor more help, use 'man screen' to learn more about how screen works.\n\n"
 
