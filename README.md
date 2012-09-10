@@ -7,6 +7,11 @@ Simple script to configure an Amazon EC2 Ubuntu instance for quick pair programm
 
 to get a quick shared session up and running.
 
+The script helps you interactively set up two users (coder1 and coder2), configures screen for sharing, and then gives you the commands to execute.
+
+Inspiration/lots of the commands are taken from this tutorial: http://blog.siyelo.com/remote-pair-programming-with-screen
+So kudos and thanks to Siyelo! Any errors/vulnerabilities here are my own, and no fault of theirs.
+
 
 Setup:
 ------
@@ -19,12 +24,11 @@ Setup:
 
    (Note: remember to edit this command to reflect your AWS key file and the address of your Amazon EC2 instance.)
 
-3. Once logged in, run this command, and when prompted for a password, type 'ubuntu' (without quotes):
+3. Once logged in, run this command; when first prompted for a password, type 'ubuntu' (without quotes). Note that you'll set a few passwords.
 
         wget https://raw.github.com/daguar/pairbuntu/master/pairbuntu.sh && sudo bash pairbuntu.sh
 
 4. Follow the instructions, and start showing off some code in your brand spanking new shared terminal!
-
 
 
 Etc:
@@ -41,7 +45,7 @@ WARNING 2:
 Amazon EC2 instances cost money! So make sure you turn them off when you're
 not using them to avoid being charged!
 
-Copyright 2012 Dave Guarino, MIT License + Beer License.
+Copyright 2012 Dave Guarino. MIT+Beer License, double whammy.
 No liability or implied guarantees at all whatsoever; truly use at your own risk.
 
 Like, seriously.

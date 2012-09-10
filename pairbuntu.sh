@@ -23,11 +23,15 @@
 echo -e "Set a new password for ubuntu, the superuser account.\n"
 passwd ubuntu
 
-echo -e "Setting up first user: coder1 (Set the password; for other user details you can hit enter to skip.\n"
+echo -e "\n\n\n\n=========================================================================="
+echo -e "Setting up first user: coder1 (Set the password; for other user details you can hit enter to skip."
+echo -e "==========================================================================\n\n"
 adduser coder1
 adduser coder1 admin
 
-echo -e "Setting up second user: coder2 (Set the password; for other user details you can hit enter to skip.)\n"
+echo -e "\n\n\n\n=========================================================================="
+echo -e "Setting up second user: coder2 (Set the password; for other user details you can hit enter to skip."
+echo -e "==========================================================================\n\n"
 adduser coder2
 adduser coder2 admin
 
@@ -38,9 +42,12 @@ sed -i 's/PasswordAuthentication\ no/PasswordAuthentication\ yes/' /etc/ssh/sshd
 echo -e "\nRestarting ssh to enable password authentication.\n\n"
 service ssh restart
 
+chmod +s /usr/bin/screen
+chmod 755 /var/run/screen
 echo -e "multiuser on\nacladd coder2" > /home/coder1/.screenrc
 chown coder1 /home/coder1/.screenrc
 
-echo -e "\n\n\n============= w00t =============\n\n"
-echo -e "Setup is complete.\n\nNext, have your buddy log in via ssh as coder2, using the password you set up for that account.\n\n  ssh coder2@ec2-9999-9999-9999-9999.compute-1.amazon.com\n  (Remember to replace the ec2-999... above with your own instance's address.)\n\n\nThen, you as coder1 type:\n\n  screen -S pairprog\n\nto start your pairing session, and have your buddy run\n\n  screen -x coder1/pairprog\n\nafter logging in to enter your shared screen.\n\n\nFor more help, use 'man screen' to learn more about how screen works.\n\n"
-
+echo -e "\n\n\n\n\n\n============= w00t =============\n\n"
+echo -e "Setup is complete.\n\nNext, have your buddy log in via ssh as coder2, using the password you set up for that account.\n\n  ssh coder2@ec2-9999-9999-9999-9999.compute-1.amazon.com\n  (Remember to replace the ec2-999... above with your own instance's address.)\n\n\nYou're now logged in as coder1. So go ahead and type:\n\n  screen -S pairprog\n\nto start your pairing session, and have your buddy run\n\n  screen -x coder1/pairprog\n\nafter logging in to enter your shared screen.\n\n\nFor more help, use 'man screen' to learn more about how screen works.\n\n"
+su coder1
+cd ~
