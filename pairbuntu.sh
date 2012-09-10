@@ -1,4 +1,5 @@
 #!/bin/bash
+# Copyright 2012 Dave Guarino, MIT License + Beer License. No liability or implied guarantees at all whatsoever; truly use at your own risk.
 
 # WARNING 1: This setup is not particularly secure: it uses password authentication for ssh, 
 # which introduces a host of security vulnerabilities. I am not responsible for any 
@@ -10,12 +11,17 @@
 # not using them to avoid being charged!
 
 # First, on your computer, log into the server using the key you assigned the server:
-# ssh -i ~/.ssh/pair-buntu-key.pem ubuntu@ec2-9999-9999-9999-9999.compute-1.amazonaws.com
+#   ssh -i ~/.ssh/your_key_from_amazon_filename_here.pem ubuntu@ec2-9999-9999-9999-9999.compute-1.amazonaws.com
 # (Note your values will be different.)
 
-# Download the script to the server using curl
-#Curl statement with URL goes here
-# Then run the script with sudo
+# Once you're logged in, run this command:
+#   wget https://raw.github.com/daguar/pairbuntu/master/pairbuntu.sh
+# Then run the script with sudo:
+#   sudo bash pairbuntu.sh
+
+
+echo -e "Set a new password for ubuntu, the superuser account.\n"
+passwd ubuntu
 
 echo -e "Setting up first user: coder1 (Set the password; for other user details you can hit enter to skip.\n"
 adduser coder1
